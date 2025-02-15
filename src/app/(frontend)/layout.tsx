@@ -28,15 +28,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body>
         <Providers>
-          <AdminBar
-            adminBarProps={{
-              preview: isEnabled,
-            }}
-          />
+          <div className="flex flex-col min-h-screen">
+            <AdminBar
+              adminBarProps={{
+                preview: isEnabled,
+              }}
+            />
 
-          <Header />
-          {children}
-          <Footer />
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

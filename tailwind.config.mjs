@@ -96,6 +96,7 @@ const config = {
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
         sans: ['var(--font-geist-sans)'],
+        spartan: ['League Spartan', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
