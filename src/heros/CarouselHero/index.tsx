@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-import type { Page, Post } from '@/payload-types'
+import type { Page } from '@/payload-types'
 
 import { Media } from '@/components/Media'
-import { formatAuthors } from '@/utilities/formatAuthors'
-import { formatDateTime } from 'src/utilities/formatDateTime'
 import {
   Carousel,
   CarouselContent,
