@@ -10,7 +10,7 @@ import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
-import { s3Storage } from '@payloadcms/storage-s3';
+import { s3Storage } from '@payloadcms/storage-s3'
 
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
@@ -98,12 +98,12 @@ export const plugins: Plugin[] = [
         prefix: 'media',
       },
     },
-    bucket: process.env.S3_BUCKET,
+    bucket: process.env.S3_BUCKET as string,
     config: {
       forcePathStyle: true, // Important for using Supabase
       credentials: {
-        accessKeyId: process.env.S3_ACCESS_KEY_ID,
-        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.S3_ACCESS_KEY_ID as string,
+        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY as string,
       },
       region: process.env.S3_REGION,
       endpoint: process.env.S3_ENDPOINT,
