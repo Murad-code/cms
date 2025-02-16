@@ -15,7 +15,6 @@ import Autoplay from 'embla-carousel-autoplay'
 import { cn } from '@/utilities/ui'
 
 export const CarouselHero: React.FC<Page['hero']> = ({ carouselContent }) => {
-  console.log(1234, carouselContent)
   const plugin = React.useRef(Autoplay({ delay: 5000 }))
 
   return (
